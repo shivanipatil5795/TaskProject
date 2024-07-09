@@ -1,0 +1,394 @@
+
+<div class="container">
+    <div class="container-fluid">
+   
+      <header class="text-white bg-primary py-3">
+        <div class="container d-flex justify-content-between">
+          <h1>INDUSTRIAL</h1><p>Intigreted Solution.Proven Result</p>
+          <p>QUESTIONS? CALL 1-800-256-9802</p>
+        </div>
+      </header>
+      
+    
+      <div class="row my-background">
+        <form [formGroup]="registerForm" (ngSubmit)="registerSubmited()" class="contact-form" >
+          
+            <h2>Contact Us Today</h2>
+
+           
+              <div class="form-group">
+                   
+                    <input type="text" class="form-control" id="fname" formControlName="fname" placeholder="First Name">
+                
+                    <div class="form-text text-danger" *ngIf="fname.errors?.['required'] && (fname.touched || fname.dirty)">
+                        First name is required.
+                    </div>
+                
+                    <div class="form-text text-danger" *ngIf="fname.errors?.['minlength'] && (fname.touched || fname.dirty)">
+                        First name is too short.
+                    </div>
+
+                    <input type="text" class="form-control" id="lname" formControlName="lname" placeholder="Last Name">
+              
+                    <div class="form-text text-danger" *ngIf="lname.errors?.['required'] && (lname.touched || lname.dirty)">
+                        Last name is required.
+                    </div>
+                
+                    <div class="form-text text-danger" *ngIf="lname.errors?.['minlength'] && (lname.touched || lname.dirty)">
+                        Last name is too short.
+                    </div>
+                    </div>
+              
+           
+          
+          
+            <div class="form-group">
+                
+                <input type="text" class="form-control" id="cname" formControlName="cname" placeholder="Compny Name">
+            
+                <div class="form-text text-danger" *ngIf="cname.errors?.['required'] && (cname.touched || cname.dirty)">
+                    Compny name is required.
+                </div>
+            
+                <div class="form-text text-danger" *ngIf="cname.errors?.['minlength'] && (cname.touched || cname.dirty)">
+                   Compny name is too short.
+                </div>
+            
+              
+            </div>
+              
+          
+          
+            <div class="form-group">
+                    
+                    <input type="email" class="form-control" id="email" formControlName="email" placeholder="Email">
+          
+                    <div class="form-text text-danger" *ngIf="email.errors?.['required'] && (email.touched || email.dirty)">
+                        Email is required.
+                    </div>
+                
+                    <div class="form-text text-danger" *ngIf="email.errors?.['pattern'] && (email.touched || email.dirty)">
+                       Email is invalid.
+                    </div>
+
+                     
+                 <input type="mo_no" class="form-control" id="mo_no" formControlName="mo_no" placeholder="Mobile Number">
+                 <div class="form-text text-danger" *ngIf="mo_no.errors?.['required'] && (mo_no.touched || mo_no.dirty)">
+                     Mobile Number is required.
+                  </div>
+                  <div class="form-text text-danger" *ngIf="mo_no.errors?.['pattern'] && (mo_no.touched || mo_no.dirty)">
+                     Mobile Number is invalid.
+                  </div>
+                  <div class="form-text text-danger" *ngIf="mo_no.errors?.['minLength'] && (mo_no.touched || mo_no.dirty)">
+                     Mobile Number is short.
+                  </div>
+                  <div class="form-text text-danger" *ngIf="mo_no.errors?.['maxLength'] && (mo_no.touched || mo_no.dirty)">
+                     Mobile Number is long.
+                  </div>
+                    
+                </div>
+          
+        
+          
+           
+          
+              <div class="form-group">
+                <textarea class="form-control" type="msgword" class="form-control" id="msg" formControlName="msg" placeholder="Message"></textarea>
+
+                   
+            
+          
+                    <div class="form-text text-danger" *ngIf="msg.errors?.['required'] && (msg.touched || msg.dirty)">
+                       MSG is required.
+                     </div>
+          
+                     <div class="form-text text-danger" *ngIf="msg.errors?.['pattern'] && (msg.touched || msg.dirty)">
+                        MSG is invalid.
+                     </div>
+                    
+                </div>
+          
+          
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary" >Submit</button>
+                    </div>
+                </div>
+            </div>
+          
+            
+          </form>
+      </div>
+      
+      <!-- Content Sections -->
+      <div class="container my-5">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <h3>Innovations</h3>
+            <img src="https://st3.depositphotos.com/7247698/34675/i/450/depositphotos_346750300-stock-photo-machine-service-talking-together-teamwork.jpg" class="img-fluid" alt="Image Description">
+            <h5>There are many variations of passages of Lorem Ipsum available, but majority have suffered alteration.</h5>
+          </div>
+          <div class="col-md-4">
+            <h3>People & Culture</h3>
+            <img src="https://st3.depositphotos.com/7247698/34675/i/450/depositphotos_346750300-stock-photo-machine-service-talking-together-teamwork.jpg" class="img-fluid" alt="Image Description">
+            <h5>There are many variations of passages of Lorem Ipsum available, but majority have suffered alteration.</h5>
+          </div>
+          <div class="col-md-4">
+            <h3>Solutions at a Glance</h3>
+            <img src="https://st3.depositphotos.com/7247698/34675/i/450/depositphotos_346750300-stock-photo-machine-service-talking-together-teamwork.jpg" class="img-fluid" alt="Image Description">
+            <h5>There are many variations of passages of Lorem Ipsum available, but majority have suffered alteration.</h5>
+          </div>
+        </div>
+      </div>
+    
+      
+      <div class="bg-primary text-white text-center py-5">
+        <h2>A Little Bit About Us</h2>
+        <p>
+          All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+        </p>
+        <button class="btn btn-secondary mt-3">LEARN MORE</button>
+      </div>
+    
+    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 fs-3">
+            <img src="https://st3.depositphotos.com/7247698/34675/i/450/depositphotos_346750300-stock-photo-machine-service-talking-together-teamwork.jpg" class="img-fluid" alt="Image Description">
+          </div>
+          <div class="col-md-6 p-4">
+            <h3>Lorem ipsum dolor</h3>
+            <h5>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 fs-3 p-4">
+            <h3>Lorem ipsum dolor</h3>
+            <h5>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</h5>
+          </div>
+          <div class="col-md-6">
+            <img src="https://st3.depositphotos.com/7247698/34675/i/450/depositphotos_346750300-stock-photo-machine-service-talking-together-teamwork.jpg" class="img-fluid" alt="Image Description">
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-white bg-primary py-3">
+      <div class="container d-flex justify-content-between ">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Created By: </h5>
+            <h6>Shivani Patil</h6>
+           
+          </div>
+      </div>
+    </footer>
+    </div>
+    
+
+
+
+
+
+
+
+<!--<div class="container">
+    <div class="row g-0 bg-primary" >
+        <div class="col-md-8 text-left p-2  ">
+            <span class="fs-3"><h6>INDUSTRIAL</h6>Integrated Solution Proven Result</span>
+        </div>
+        <div class="col text-right p-2 ">
+            <span class="fs-3">QUETIONS?CALL1-800-256-9802</span>
+        </div></div>
+    
+        <div class="row my-background">
+        <div class="row " >
+            
+          <div class="col-md-8 mb-4 ">
+           </div>
+   
+           <div class="col-md-4 mb-4 " >
+   
+            <form [formGroup]="registerForm" (ngSubmit)="registerSubmited()" class="border p-3 rounded-3 bg-primary contact-form">
+          
+          <div class="row g-0" >
+              <div class="col text-center p-2 mb-3 bg-light">
+                  <span class="fs-3">CONTACT US TODAY</span>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col mb-3">
+                 
+                  <input type="text" class="form-control" id="fname" formControlName="fname" placeholder="First Name">
+              
+                  <div class="form-text text-danger" *ngIf="fname.errors?.['required'] && (fname.touched || fname.dirty)">
+                      First name is required.
+                  </div>
+              
+                  <div class="form-text text-danger" *ngIf="fname.errors?.['minlength'] && (fname.touched || fname.dirty)">
+                      First name is too short.
+                  </div>
+              
+                
+              </div>
+              <div class="col mb-3">
+               
+                <input type="text" class="form-control" id="lname" formControlName="lname" placeholder="Last Name">
+            
+                <div class="form-text text-danger" *ngIf="lname.errors?.['required'] && (lname.touched || lname.dirty)">
+                    Last name is required.
+                </div>
+            
+                <div class="form-text text-danger" *ngIf="lname.errors?.['minlength'] && (lname.touched || lname.dirty)">
+                    Last name is too short.
+                </div>
+            
+              
+            </div>
+              
+          </div>
+
+          <div class="row">
+            
+            <div class="col mb-3">
+              
+              <input type="text" class="form-control" id="cname" formControlName="cname" placeholder="Compny Name">
+          
+              <div class="form-text text-danger" *ngIf="cname.errors?.['required'] && (cname.touched || cname.dirty)">
+                  Compny name is required.
+              </div>
+          
+              <div class="form-text text-danger" *ngIf="cname.errors?.['minlength'] && (cname.touched || cname.dirty)">
+                 Compny name is too short.
+              </div>
+          
+            
+          </div>
+            
+        </div>
+
+          <div class="row">
+              <div class="col mb-3">
+                  
+                  <input type="email" class="form-control" id="email" formControlName="email" placeholder="Email">
+      
+                  <div class="form-text text-danger" *ngIf="email.errors?.['required'] && (email.touched || email.dirty)">
+                      Email is required.
+                  </div>
+              
+                  <div class="form-text text-danger" *ngIf="email.errors?.['pattern'] && (email.touched || email.dirty)">
+                     Email is invalid.
+                  </div>
+                  
+              </div>
+
+              <div class="col mb-3">
+                
+               <input type="mo_no" class="form-control" id="mo_no" formControlName="mo_no" placeholder="Mobile Number">
+                <div class="form-text text-danger" *ngIf="mo_no.errors?.['required'] && (mo_no.touched || mo_no.dirty)">
+                    Mobile Number is required.
+                 </div>
+                 <div class="form-text text-danger" *ngIf="mo_no.errors?.['pattern'] && (mo_no.touched || mo_no.dirty)">
+                    Mobile Number is invalid.
+                 </div>
+                 <div class="form-text text-danger" *ngIf="mo_no.errors?.['minLength'] && (mo_no.touched || mo_no.dirty)">
+                    Mobile Number is short.
+                 </div>
+                 <div class="form-text text-danger" *ngIf="mo_no.errors?.['maxLength'] && (mo_no.touched || mo_no.dirty)">
+                    Mobile Number is long.
+                 </div>
+    
+            
+            </div>
+          </div>
+         
+        
+          <div class="row">
+              <div class="col mb-3">
+                 
+                  <input type="msgword" class="form-control" id="msg" formControlName="msg" placeholder="Message">
+      
+                  <div class="form-text text-danger" *ngIf="msg.errors?.['required'] && (msg.touched || msg.dirty)">
+                     MSG is required.
+                   </div>
+      
+                   <div class="form-text text-danger" *ngIf="msg.errors?.['pattern'] && (msg.touched || msg.dirty)">
+                      MSG is invalid.
+                   </div>
+                  
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-6 offset-3">
+                  <div class="d-grid">
+                      <button type="submit" class="btn btn-primary" >Submit</button>
+                  </div>
+              </div>
+          </div>
+      
+          
+      </form>
+      </div>
+      </div>
+      </div>
+    
+
+    <div class="row">
+        <div class="col-md-4 mb-4 " >
+          <h2 >Innovation</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi_bH4P0D7dD5-nX9tBSDIYFEznud94fGWE_6_oomCj44hl0fgVeHSkvIQmmWz_TXhtSE&usqp=CAU" alt="Mountain">
+          <h6>There are many variations of msgages of Lorem Ipsum available, but majority have suffered alteration.</h6>
+        </div>
+        <div class="col-md-4 mb-4 ">
+            <h2 >People And Culture</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi_bH4P0D7dD5-nX9tBSDIYFEznud94fGWE_6_oomCj44hl0fgVeHSkvIQmmWz_TXhtSE&usqp=CAU" alt="Mountain">
+          <h6>There are many variations of msgages of Lorem Ipsum available, but majority have suffered alteration.</h6>
+        </div>
+        <div class="col-md-4 mb-4  ">
+            <h2 >Solutions at a Glance</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi_bH4P0D7dD5-nX9tBSDIYFEznud94fGWE_6_oomCj44hl0fgVeHSkvIQmmWz_TXhtSE&usqp=CAU" alt="Mountain">
+          <h6>There are many variations of msgages of Lorem Ipsum available, but majority have suffered alteration.</h6>
+        </div>
+      </div>
+
+      <div class="row g-0 bg-primary" >
+        <div class="col text-center p-2  ">
+            <span class="fs-3"><h2>A Little Bit About Us</h2></span>
+           <span >
+All the Lorem Ipsaan ymenrices on the Internet tood to rept predefined dunko necessary, making this Bestur gonencr in the foernet. It was a dictionary of over 200 Latin words, combined with a haulid of model sente noble. The generated Lunes Ipsan is Cerefore swayu ου κ non-characteristic word ther and anything umharassing etc.</span>
+        </div>
+        
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 p-4">
+        <img src="https://st3.depositphotos.com/7247698/34675/i/450/depositphotos_346750300-stock-photo-machine-service-talking-together-teamwork.jpg" alt="Mountain">
+      </div>
+      
+      <div class="col-md-6 fs-3 p-4">
+        <h2>Lorem ipsum dolor</h2>
+        <p>
+            All the Lorem Ipsum generators on the Internet tend to repeat prodefined chunks as necessary, making this first true generator on the Internet. It uses a dictionary ef over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is there fore always free from repetition.</p>
+      </div>
+    
+    </div>
+    <div class="row">
+        <div class="col-md-6 fs-3 p-4">
+            <h2>Lorem ipsum dolor</h2>
+            <p>
+                All the Lorem Ipsum generators on the Internet tend to repeat prodefined chunks as necessary, making this first true generator on the Internet. It uses a dictionary ef over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is there fore always free from repetition.</p>
+        </div>
+        
+        <div class="col-md-6">
+          <img src="https://st3.depositphotos.com/7247698/34675/i/450/depositphotos_346750300-stock-photo-machine-service-talking-together-teamwork.jpg" alt="Mountain">
+        </div>
+      
+      </div>
+    <div class="row g-0 bg-primary" >
+      
+      <div class="col text-right p-2 ">
+          <span >Designed By: Shivani Patil</span>
+      </div>
+  </div>-->
+
+
