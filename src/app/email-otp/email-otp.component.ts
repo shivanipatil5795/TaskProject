@@ -23,7 +23,7 @@ export class EmailOTPComponent {
     private emailService: EmailService
   ) {
     this.registrationForm = this.fb.group({
-      fullName: ['', [Validators.required, Validators.pattern(/^.{3,}$/)]],
+      fullName: ['', [Validators.required, Validators.pattern('^[a-zA-Z ]*$')]],
       email: ['', [Validators.required, Validators.email]],
       mobileNumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       username: ['', Validators.required],
